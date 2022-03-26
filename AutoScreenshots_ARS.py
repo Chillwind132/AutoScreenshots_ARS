@@ -17,10 +17,11 @@ def save_screenshots(selection):
 
             mod_line = line.replace("/", "").replace(".html", "").replace(".", "").replace(
                 "https", "").replace("http", "").replace(":", "").replace("www", "")
-            file_name = path + "\\output\\" + mod_line.strip() + format
+            file_name = path + "/output/" + mod_line.strip() + format
             print(file_name)
             options = webdriver.ChromeOptions()
             options.headless = True
+            options.add_argument("--no-sandbox")
             driver = webdriver.Chrome(options=options)
             driver.get(URL)
             def S(X): return driver.execute_script(
@@ -48,7 +49,7 @@ def convert_img_pdf():
 if __name__ == "__main__":
 
     path = os.getcwd()
-    output_path = path + "\\output\\"
+    output_path = path + "/output/"
     if os.path.exists(output_path):
         print("Dir exists")
     else:
