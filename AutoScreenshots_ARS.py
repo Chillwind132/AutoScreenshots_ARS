@@ -4,6 +4,7 @@ from selenium.webdriver.chrome.options import Options
 import os
 import img2pdf
 
+### Required: Python 3.9+ & Chrome installed & Chromedriver executable in $PATH ###
 
 def save_screenshots(selection):
 
@@ -57,11 +58,11 @@ if __name__ == "__main__":
         os.makedirs(output_path)
     
     selection = input(
-        "Would you like to convert URLs to images/PDFs? Input 1 to select Images; Input 2 to select PDFs\n")
+        "Would you like to convert URLs to images/PDFs? Input 1 to select images; Input 2 to select PDFs\n")
     while selection != '1' and selection != '2':
         print('Invalid input')
         selection = input(
-            "Would you like to convert URLs to images/PDFs? Input 1 to select Images; Input 2 to select PDFs\n")
+            "Would you like to convert URLs to images/PDFs? Input 1 to select images; Input 2 to select PDFs\n")
     save_screenshots(selection)
 
     if selection == "2":
