@@ -4,6 +4,7 @@ from selenium.webdriver.chrome.options import Options
 import os
 import img2pdf
 
+
 def save_screenshots(selection):
 
     with open("list_urls.txt") as file:
