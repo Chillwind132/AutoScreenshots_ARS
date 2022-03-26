@@ -57,11 +57,11 @@ if __name__ == "__main__":
         os.makedirs(output_path)
     
     selection = input(
-        "Would you like to convert URLS to images or PDFs? Press 1 to select Images; Press 2 to select PDFs\n")
+        "Would you like to convert URLs to images/PDFs? Input 1 to select Images; Input 2 to select PDFs\n")
     while selection != '1' and selection != '2':
         print('Invalid input')
         selection = input(
-            "Would you like to convert URLS to images or PDFs? Press 1 to select Images; Press 2 to select PDFs\n")
+            "Would you like to convert URLs to images/PDFs? Input 1 to select Images; Input 2 to select PDFs\n")
     save_screenshots(selection)
 
     if selection == "2":
