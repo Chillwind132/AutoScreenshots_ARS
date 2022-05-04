@@ -4,7 +4,7 @@ Convert a list of URLs to individual image or PDF files. Specifically engineered
 ## Highlights
 
 *	Free
-*	High quality output
+*	High-quality output
 *	Simple to use
 
 ## Prerequisites
