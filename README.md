@@ -12,11 +12,15 @@ Convert a list of URLs to individual image or PDF files. Specifically engineered
 * Python 3.9+
 * Chrome browser installed
 
-## Getting Started
-
-* Download Chrome driver here -> [https://chromedriver.chromium.org/downloads]. Make sure to get the same version as the chrome browser on your PC.
-* Drop it into the folder & replace the current chromedriver.exe (Windows) or chromedriver (Linux).
-
+## Installation
+1. Download Chrome driver here -> [https://chromedriver.chromium.org/downloads]. 
+2. Make sure to get the same version as the chrome browser on your PC.
+3. Drop it into the folder & replace the current chromedriver.exe (Windows) or chromedriver (Linux).
+4. The following command will install the packages according to the configuration file "requirements.txt"
+   ```
+   pip install -r requirements.txt
+   ```
+   
 ## Usage
 
 * Populate the [list_urls.txt] with the list of URLs to be converted. Sample format provided. 
