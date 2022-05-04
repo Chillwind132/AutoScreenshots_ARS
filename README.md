@@ -1,5 +1,5 @@
 # AutoScreenshots_ARS
-Convert a list of URLs to individual image or PDF files. Specifically engineered to avoid output image distortions or similar issues that plague other solutions.
+Convert a list of URLs to individual image or PDF files. Specifically engineered to avoid output image distortions and similar issues that plague other solutions.
 
 ## Highlights
 
