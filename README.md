@@ -7,6 +7,11 @@ Convert a list of URLs to individual image or PDF files. Specifically engineered
 *	High quality output
 *	Simple to use
 
+## Prerequisites
+
+* Python 3.9+
+* Chrome browser installed
+
 ## Getting Started
 
 * Download Chrome driver here -> [https://chromedriver.chromium.org/downloads]. Make sure to get the same version as the chrome browser on your PC.
