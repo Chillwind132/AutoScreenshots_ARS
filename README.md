@@ -4,9 +4,9 @@ Convert a list of URLs to individual images or PDF files. Specifically engineere
 ## Highlights
 
 *	Free
-*	High-quality output
+*	High-quality output (PDF or JPG)_
 *	Simple to use
-*	Works on both Linux and Windows
+*	For Linux and Windows
 
 ## Prerequisites
 
