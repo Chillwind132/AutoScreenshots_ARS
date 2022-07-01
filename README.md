@@ -14,9 +14,9 @@ Convert a list of URLs to individual images or PDF files. Specifically engineere
 * Chrome browser installed
 
 ## Installation
-1. Download Chrome driver here -> [https://chromedriver.chromium.org/downloads]. 
-2. Make sure to get the same version as the chrome browser on your PC.
-3. Drop it into the root folder & replace the current chromedriver.exe (Windows) or chromedriver (Linux).
+1. Download Chrome driver here -> [https://chromedriver.chromium.org/downloads]
+2. Make sure to get the same version as the chrome browser on your PC
+3. Drop it into the root folder & replace the current chromedriver.exe (Windows) or chromedriver (Linux)
 4. The following command will install the packages according to the configuration file "requirements.txt"
    ```
    pip install -r requirements.txt
@@ -24,5 +24,5 @@ Convert a list of URLs to individual images or PDF files. Specifically engineere
    
 ## Usage
 
-* Populate the [list_urls.txt] with the list of URLs to be converted according to the sample format. 
-* Run AutoScreenshots_ARS.py
+* Populate the [list_urls.txt] with the list of URLs to be converted according to the sample format
+* Run "AutoScreenshots_ARS.py"
