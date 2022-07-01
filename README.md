@@ -24,5 +24,5 @@ Convert a list of URLs to individual images or PDF files. Specifically engineere
    
 ## Usage
 
-* Populate the [list_urls.txt] with the list of URLs to be converted. Sample format provided. 
+* Populate the [list_urls.txt] with the list of URLs to be converted according to the sample format. 
 * Execute the AutoScreenshots_ARS.py file.
