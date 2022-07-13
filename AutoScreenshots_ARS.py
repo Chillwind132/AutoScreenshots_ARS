@@ -1,10 +1,12 @@
 from selenium import webdriver
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.by import By
 import os
 import img2pdf
 
 ### Required: Python 3.9+ & Chrome installed & Chromedriver executable in $PATH ###
+### Linux users: place your chromedriver binary into /usr/local/bin/chromedriver
 
 def save_screenshots(selection):
 
@@ -13,7 +15,7 @@ def save_screenshots(selection):
             URL = line
 
             if selection == "1":
-                format = ".jpg"
+                format = ".png"
             else:
                 format = ".jp2"
 
@@ -24,17 +26,17 @@ def save_screenshots(selection):
             options = webdriver.ChromeOptions()
             options.headless = True
             options.add_argument("--no-sandbox")
-            driver = webdriver.Chrome(options=options)
+            driver = webdriver.Chrome(options=options) # sudo mv -f chromedriver /usr/local/bin/chromedriver
             driver.get(URL)
             def S(X): return driver.execute_script(
                 'return document.body.parentNode.scroll'+X)
             driver.set_window_size(S('Width'), S('Height'))
-            driver.find_element_by_tag_name('body').screenshot(file_name)
+            driver.find_element(By.TAG_NAME, 'body').screenshot(file_name)
 
     driver.quit()
 
 def convert_img_pdf():
-    
+
     for filename in os.listdir(output_path):
         f_img = os.path.join(output_path, filename)
         if os.path.isfile(f_img):
@@ -47,7 +49,7 @@ def convert_img_pdf():
                 with open(f_out, "wb") as f:
                     f.write(img2pdf.convert(f_img))
                 os.remove(f_img)
-        
+
 if __name__ == "__main__":
 
     path = os.getcwd()
@@ -56,7 +58,7 @@ if __name__ == "__main__":
         print("Dir exists")
     else:
         os.makedirs(output_path)
-    
+
     selection = input(
         "Would you like to convert URLs to images/PDFs? Input 1 to select images; Input 2 to select PDFs\n")
     while selection != '1' and selection != '2':
