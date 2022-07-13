@@ -6,7 +6,7 @@ import os
 import img2pdf
 
 ### Required: Python 3.9+ & Chrome installed & Chromedriver executable in $PATH ###
-### Linux users: place your chromedriver binary into /usr/local/bin/chromedriver
+### Linux users: place your chromedriver binary into /usr/local/bin
 
 def save_screenshots(selection):
 
