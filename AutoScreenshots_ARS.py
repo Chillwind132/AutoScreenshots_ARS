@@ -2,11 +2,9 @@ from selenium import webdriver
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
+from webdriver_manager.chrome import ChromeDriverManager
 import os
 import img2pdf
-
-### Required: Python 3.9+ & Chrome installed & Chromedriver executable in $PATH ###
-### Linux users: place your chromedriver binary into /usr/local/bin
 
 def save_screenshots(selection):
 
@@ -26,7 +24,7 @@ def save_screenshots(selection):
             options = webdriver.ChromeOptions()
             options.headless = True
             options.add_argument("--no-sandbox")
-            driver = webdriver.Chrome(options=options) # sudo mv -f chromedriver /usr/local/bin/chromedriver
+            driver = webdriver.Chrome(ChromeDriverManager().install(), options=options)
             driver.get(URL)
             def S(X): return driver.execute_script(
                 'return document.body.parentNode.scroll'+X)
